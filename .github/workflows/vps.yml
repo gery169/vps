@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-    - uses: vps/linux-ssh.sh
+    - uses: ./../linux-ssh.sh
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
     - name: Preparando el sistema linux.
