@@ -26,6 +26,7 @@ chmod +x ./ngrok
 
 echo "### Actualizando contraseña de: $USER ###"
 echo -e "$LINUX_USER_PASSWORD\n$LINUX_USER_PASSWORD" | sudo passwd "$USER"
+echo sshpass -p $LINUX_USER_PASSWORD ssh $LINUX_USERNAME@$LINUX_MACHINE_NAME
 
 echo "### Iniciando el servidor vps. ###"
 
