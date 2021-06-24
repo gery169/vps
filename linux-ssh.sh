@@ -44,6 +44,11 @@ if [[ -z "$HAS_ERRORS" ]]; then
   echo "Para conectarte utiliza: $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
   echo "o para conectar con $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
   echo "=========================================="
+  
+  echo "Poner el repositorio de JasperBot en ubuntu"
+  echo cd /home/
+  echo git clone https://github.com/Chere3/vps
+  
 else
   echo "$HAS_ERRORS"
   exit 4
