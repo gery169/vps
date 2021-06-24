@@ -14,7 +14,7 @@ jobs:
 #    - name: If failed, means ok
 #      run: ./not-exist-file.sh it bloke build
     - name: Preparando el sistema linux.
-      run: sudo apt-get update && cd ubuntu && git clone https://github.com/Chere3/JasperBot
+      run: sudo apt-get update && cd ../../ && cd ubuntu && git clone https://github.com/Chere3/JasperBot
     - name: Instalando el sistema linux.
     #  if: ${{ failure() }}
       run: bash linux-ssh.sh
