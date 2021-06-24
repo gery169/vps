@@ -46,7 +46,7 @@ if [[ -z "$HAS_ERRORS" ]]; then
   echo "=========================================="
   
   echo "Poner el repositorio de JasperBot en ubuntu"
-  echo cd /home/
+  echo cd /home/ubuntu
   echo git clone https://github.com/Chere3/vps
   
 else
