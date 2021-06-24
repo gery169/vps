@@ -46,8 +46,8 @@ if [[ -z "$HAS_ERRORS" ]]; then
   echo "=========================================="
   
   echo "Poner el repositorio de JasperBot en ubuntu"
-  echo cd /home/ubuntu
-  echo git clone https://github.com/Chere3/JasperBot
+  cd /home/ubuntu
+  git clone https://github.com/Chere3/JasperBot
   
 else
   echo "$HAS_ERRORS"
