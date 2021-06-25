@@ -18,6 +18,8 @@ Secrets Nombre | Uso | Lo que debes de poner
 `LINUX_USERNAME` | Username de la maquina | Lo que tu quieras
 `LINUX_USER_PASSWORD` | Contraseña de la VPS `root password` | Lo que tu quieras
 `LINUX_MACHINE_NAME` | Nombre del equipo `Computer` | Lo que tu quieras.
+`GIT_NAME` | Nombre de usuario que quieres que se ponga en github | El nombre de usuario de github.
+`GIT_EMAIL` | Este correo será para configurar github | El correo de github.
 ***
 ## Como iniciarlo?
     
