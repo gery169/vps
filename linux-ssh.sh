@@ -18,6 +18,17 @@ if [[ -z "$LINUX_USER_PASSWORD" ]]; then
   exit 3
 fi
 
+if [[ -z "$GIT_EMAIL" ]]; then
+echo "El correo de github es obligatorio, y no se ha encontrado por ninguna parte."
+exit 4
+fi
+
+if [[ -z "$GIT_NAME" ]]; then
+echo "El nombre es obligatorio, y no se ha encotrado por ninguna parte"
+exit 5
+fi
+
+
 echo "### Instalando ngrok para el tunel ###"
 
 wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
@@ -45,7 +56,10 @@ if [[ -z "$HAS_ERRORS" ]]; then
   echo "o para conectar con $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
   echo "=========================================="
   
-  echo "Poner el repositorio de JasperBot en ubuntu"
+  echo "Configurando github"
+  
+  sudo git config --global user.email "$GIT_EMAIL"
+  sudo git config --global user.name "$GIT_NAME"
   
 else
   echo "$HAS_ERRORS"
