@@ -24,6 +24,9 @@ jobs:
         CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
         LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
         LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
+        GIT_NAME: ${{ secrets.GIT_NAME }}
+        GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+        
     - name: Seguir corriendo el sistema linux y dejalo por 6 horas.
      # if: ${{ failure() }}
       run: sleep 6h
