@@ -56,10 +56,6 @@ if [[ -z "$HAS_ERRORS" ]]; then
   echo "o para conectar con $(grep -o -E "tcp://(.+)" < .ngrok.log | sed "s/tcp:\/\//ssh $USER@/" | sed "s/:/ -p /")"
   echo "=========================================="
   
-  echo "Configurando github"
-  
-  sudo git config --global user.email "$GIT_EMAIL"
-  sudo git config --global user.name "$GIT_NAME"
   
 else
   echo "$HAS_ERRORS"
